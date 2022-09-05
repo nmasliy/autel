@@ -1,0 +1,13 @@
+// если вы хотите использовать sass-переменные - удалите root
+
+// base
+$font-family: "Helvetica", sans-serif;
+$content-width: 1080px;
+$container-offset: 15px;
+$container-width: calc($content-width + ($container-offset * 2));
+$menu-transition: 0.35s;
+
+// colors
+$light-color: #fff;
+$black-color: #0c0c0c;
+$accent-color: #d2232a;

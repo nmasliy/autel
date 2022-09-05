@@ -1,0 +1,65 @@
+.header {
+}
+
+.nav {
+  &__item {
+    color: $light-color;
+  }
+}
+
+.menu {
+  @include tablet {
+    position: fixed;
+    left: 12px;
+    right: 12px;
+    top: 12px;
+    bottom: 12px;
+    z-index: 7;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    border-radius: 25px;
+    padding: 100px 20px 40px;
+    background-color: $accent-color;
+    opacity: 0;
+    transition: $menu-transition ease;
+
+    &.is-active {
+      opacity: 1;
+    }
+  }
+}
+
+.burger {
+  display: none;
+
+  &.is-active {
+    z-index: 10;
+  }
+
+  @include tablet {
+    @include burger;
+
+    display: block;
+  }
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 5;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(#000, 0.5);
+  opacity: 0;
+  transition: $menu-transition;
+
+  &.is-active {
+    opacity: 1;
+  }
+}
