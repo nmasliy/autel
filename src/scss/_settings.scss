@@ -18,6 +18,7 @@ html {
     min-width: 320px;
     min-height: 100%;
     font-size: 16px;
+    line-height: 1.1;
     color: $light-color;
     background-color: $black-color;
   }
@@ -88,6 +89,10 @@ a {
   margin: 0 auto;
   padding: 0 $container-offset;
   max-width: $container-width;
+
+  &--lg {
+    max-width: $container-width + 160px;
+  }
 }
 
 .centered {

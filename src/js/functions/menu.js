@@ -1,7 +1,5 @@
-import { disableScroll } from './disable-scroll';
-import { enableScroll } from './enable-scroll';
-
 (function () {
+  const $html = document.querySelector('html');
   const $menu = document?.querySelector('[data-menu]');
   const $burger = document?.querySelector('[data-burger]');
   const $close = document?.querySelector('[data-menu-close]');
@@ -34,7 +32,7 @@ import { enableScroll } from './enable-scroll';
     $burger.setAttribute('aria-expanded', 'true');
     $burger.setAttribute('aria-label', 'Закрыть меню');
 
-    disableScroll();
+    $html.classList.add('disable-scroll');
 
     setTimeout(function () {
       $overlay.classList.add('is-active');
@@ -50,7 +48,7 @@ import { enableScroll } from './enable-scroll';
     $burger.setAttribute('aria-expanded', 'false');
     $burger.setAttribute('aria-label', 'Открыть меню');
 
-    enableScroll();
+    $html.classList.remove('disable-scroll');
 
     setTimeout(function () {
       $overlay.style.display = '';

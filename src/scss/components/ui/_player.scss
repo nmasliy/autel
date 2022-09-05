@@ -1,0 +1,4 @@
+.player-icon {
+  @include circle(64px, $g1-color);
+  @include flex-all-center;
+}

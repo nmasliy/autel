@@ -1,0 +1,104 @@
+.hero {
+  padding-top: 50px;
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__subtitle {
+    font-size: 26px;
+    color: $light-color;
+  }
+
+  &__img {
+    @include flex-h-center;
+
+    position: relative;
+    top: -100px;
+    margin-bottom: -255px;
+  }
+
+  &__items {
+    @include flex-h-center;
+
+    margin-bottom: 85px;
+  }
+
+  &__item {
+    position: relative;
+    font-family: "AlumniSans", sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.25;
+    color: $g1-color;
+
+    &:first-child {
+      &::before {
+        content: "";
+        position: absolute;
+        left: -87px;
+        top: -76px;
+        width: 77px;
+        height: 94px;
+        background: url("../img/hero-line.svg") center no-repeat;
+      }
+    }
+
+    &:last-child {
+      &::after {
+        content: "";
+        position: absolute;
+        right: -109px;
+        top: -76px;
+        width: 77px;
+        height: 94px;
+        background: url("../img/hero-line.svg") center no-repeat;
+        transform: scaleX(-1);
+      }
+    }
+
+    &:nth-child(2) {
+      margin-right: 220px;
+      margin-left: 120px;
+    }
+  }
+}
+
+.hero-benefits {
+  &__list {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 164px 129px 151px 209px;
+    gap: 30px 100px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 20px;
+      z-index: -1;
+      margin: 0 auto;
+      width: 70%;
+      height: 1px;
+      background-color: $g3-color;
+    }
+  }
+
+  &__item {
+    text-align: center;
+  }
+
+  &__icon {
+    @include circle(40px);
+    @include flex-all-center;
+
+    margin: 0 auto 13px;
+  }
+
+  &__text {
+    line-height: 1.4;
+    color: $g1-color;
+  }
+}

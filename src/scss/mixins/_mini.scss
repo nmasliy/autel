@@ -26,6 +26,11 @@
   justify-content: center;
 }
 
+@mixin flex-sb {
+  display: flex;
+  justify-content: space-between;
+}
+
 @mixin flex-all-sb {
   display: flex;
   align-items: center;
@@ -97,4 +102,11 @@ $browser-context: 16; // Default
 @mixin pseudo() {
   content: '';
   display: block;
+}
+
+@mixin circle($size: 22px, $color: $accent-color) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  background-color: $color;
 }
