@@ -2,16 +2,11 @@
   position: relative;
 
   &::before {
-    content: "";
-    position: absolute;
+    @include bg-circle;
+
     left: -81px;
     top: 91px;
     z-index: -1;
-    border-radius: 50%;
-    width: 424px;
-    height: 424px;
-    background-color: rgb(139 103 103 / 10%);
-    filter: blur(90px);
   }
 
   &__title {

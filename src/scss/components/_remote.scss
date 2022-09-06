@@ -1,4 +1,14 @@
 .remote {
+  position: relative;
+
+  &::before {
+    @include bg-circle(581px, 130px);
+
+    right: -20px;
+    top: 158px;
+    z-index: -1;
+  }
+
   &__subtitle {
     margin-bottom: 67px;
   }
@@ -39,13 +49,11 @@
   }
 
   &__video-items {
-    position: absolute;
-    left: 50%;
-    top: 50%;
+    @include absolute-center;
+
     z-index: 3;
     display: flex;
     align-items: center;
-    transform: translate(-50%, -50%);
   }
 
   &__play {

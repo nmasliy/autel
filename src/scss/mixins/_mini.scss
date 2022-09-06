@@ -118,3 +118,20 @@ $browser-context: 16; // Default
   border-width: 0 $size $size 0;
   border-color: transparent $accent-color transparent transparent;
 }
+
+@mixin bg-circle($size: 400px, $blur: 90px) {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  width: $size;
+  height: $size;
+  background-color: rgb(139 103 103 / 10%);
+  filter: blur($blur);
+}
+
+@mixin absolute-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

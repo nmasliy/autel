@@ -1,5 +1,14 @@
 .comfort {
   position: relative;
+  background-color: #141111;
+
+  &::before {
+    @include bg-circle(368px, 50px);
+
+    right: -120px;
+    top: 197px;
+    z-index: -1;
+  }
 
   &__subtitle {
     margin-bottom: 50px;
@@ -30,6 +39,7 @@
     border: 1px solid $g2-color;
     border-bottom: none;
     padding: 18px;
+    line-height: 1.4;
     text-align: center;
     color: $g1-color;
   }
