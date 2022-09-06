@@ -54,13 +54,13 @@
   }
 
   &__list {
-    counter-reset: remote-items;
+    counter-reset: remote;
   }
 
   &__item {
     @include mb(14px);
 
-    counter-increment: remote-items;
+    counter-increment: remote;
     border: 1px solid $g3-color;
     border-radius: 10px;
     padding: 28px 47px 28px 58px;
@@ -71,7 +71,7 @@
     background-color: $black-color;
 
     &::before {
-      content: "0" counter(remote-items) "/ ";
+      content: "0" counter(remote) "/ ";
       color: $accent-color;
     }
   }

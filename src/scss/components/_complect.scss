@@ -1,0 +1,68 @@
+.complect {
+  background: url("../img/complect-bg.png") no-repeat center / cover;
+
+  &__subtitle {
+    margin: 0 auto 50px;
+    max-width: 400px;
+  }
+
+  &__list {
+    counter-reset: complect;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 50px;
+  }
+
+  &__item {
+    counter-increment: complect;
+    position: relative;
+    padding: 35px 24px;
+    box-shadow: 0 0 0 1px $g2-color;
+    color: $g1-color;
+    background-color: $black-color;
+
+    &::before {
+      @include circle(22px);
+      @include flex-all-center;
+
+      content: "0" counter(complect);
+      position: absolute;
+      right: 24px;
+      top: 24px;
+      font-family: "AlumniSans", sans-serif;
+      font-weight: 500;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    &:first-child {
+      border-radius: 10px 0 0;
+    }
+
+    &:last-child {
+      border-radius: 0 0 10px;
+    }
+
+    &:nth-child(4) {
+      border-radius: 0 0 0 10px;
+    }
+
+    &:nth-child(3) {
+      border-radius: 0 10px 0 0;
+    }
+  }
+
+  &__name {
+    margin-bottom: 13px;
+    font-family: "AlumniSans", sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+  }
+
+  @supports (-webkit-appearance:none) {
+    background-image: url("../img/complect-bg.webp");
+  }
+}
