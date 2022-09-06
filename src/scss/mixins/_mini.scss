@@ -111,10 +111,10 @@ $browser-context: 16; // Default
   background-color: $color;
 }
 
-@mixin triangle {
+@mixin triangle($size: 19px) {
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 0 19px 19px 0;
+  border-width: 0 $size $size 0;
   border-color: transparent $accent-color transparent transparent;
 }
