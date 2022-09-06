@@ -1,6 +1,4 @@
 .video {
-  padding-top: 0;
-
   &__container {
     @include bg-cover;
     @include flex-all-center;

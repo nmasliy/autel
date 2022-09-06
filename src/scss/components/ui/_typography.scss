@@ -6,6 +6,10 @@
   line-height: 1;
   letter-spacing: 0.01em;
   text-transform: uppercase;
+
+  span {
+    text-transform: none;
+  }
 }
 
 .section-subtitle {
@@ -15,10 +19,6 @@
   color: $g1-color;
 }
 
-.section-offset {
-  padding: 150px 0;
-
-  &-sm {
-    padding: 75px 0;
-  }
+.color-accent {
+  color: $accent-color;
 }

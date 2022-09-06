@@ -106,3 +106,11 @@ a {
     overflow: hidden;
   }
 }
+
+.section-offset {
+  padding: 150px 0;
+
+  &-sm {
+    padding: 75px 0;
+  }
+}
