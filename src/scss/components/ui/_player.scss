@@ -2,3 +2,8 @@
   @include circle(64px, $g1-color);
   @include flex-all-center;
 }
+
+.player-icon-sm {
+  @include circle(42px, $g1-color);
+  @include flex-all-center;
+}

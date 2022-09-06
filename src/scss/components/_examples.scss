@@ -20,8 +20,6 @@
     min-height: 292px;
     background: url("../img/card-panel.svg") top no-repeat;
 
-    // width="503" height="292"
-
     &::before {
       @include triangle;
 
@@ -66,6 +64,8 @@
 
     p {
       max-width: 207px;
+      font-weight: 500;
+      line-height: 1.4;
     }
   }
 
