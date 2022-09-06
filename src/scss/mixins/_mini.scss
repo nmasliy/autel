@@ -110,3 +110,11 @@ $browser-context: 16; // Default
   border-radius: 50%;
   background-color: $color;
 }
+
+@mixin triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 19px 19px 0;
+  border-color: transparent $accent-color transparent transparent;
+}

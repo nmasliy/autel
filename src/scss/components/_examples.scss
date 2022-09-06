@@ -1,0 +1,79 @@
+.examples {
+  background-color: #141111;
+
+  &__container {
+    max-width: 1060px;
+  }
+
+  &__list {
+    counter-reset: examples;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 62px 0 50px;
+    gap: 23px;
+  }
+
+  &__item {
+    counter-increment: examples;
+    position: relative;
+    padding: 100px 44px 53px;
+    min-height: 292px;
+    background: url("../img/card-panel.svg") top no-repeat;
+
+    // width="503" height="292"
+
+    &::before {
+      @include triangle;
+
+      content: "";
+      position: absolute;
+      right: 24px;
+      top: 30px;
+    }
+  }
+
+  &__count {
+    position: absolute;
+    left: 0;
+    top: -15px;
+    font-family: "AlumniSans", sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    text-transform: uppercase;
+    color: $accent-color;
+
+    &::before {
+      content: "0" counter(examples) "/";
+    }
+  }
+
+  &__item-inner {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__icon {
+    @include circle(64px, transparent);
+    @include flex-all-center;
+
+    flex-shrink: 0;
+    border: 2px solid $g2-color;
+  }
+
+  &__info {
+    margin-left: 27px;
+    color: $g1-color;
+
+    p {
+      max-width: 207px;
+    }
+  }
+
+  &__name {
+    margin-bottom: 22px;
+    font-family: "AlumniSans", sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    text-transform: uppercase;
+  }
+}
