@@ -119,13 +119,13 @@ $browser-context: 16; // Default
   border-color: transparent $accent-color transparent transparent;
 }
 
-@mixin bg-circle($size: 400px, $blur: 90px) {
+@mixin bg-circle($size: 400px, $blur: 90px, $opacity: 0.1) {
   content: '';
   position: absolute;
   border-radius: 50%;
   width: $size;
   height: $size;
-  background-color: rgb(139 103 103 / 10%);
+  background-color: rgba(139, 103, 103, $opacity);
   filter: blur($blur);
 }
 
