@@ -93,6 +93,10 @@ a {
   &--lg {
     max-width: $container-width + 160px;
   }
+
+  &--sm {
+    max-width: $container-width - 20px;
+  }
 }
 
 .centered {
