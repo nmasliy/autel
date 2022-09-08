@@ -10,7 +10,7 @@
         const $activeContent = document.querySelector(
           '[data-tabs-content].is-active'
         );
-        const id = tab.getAttribute('data-tabs');
+        const id = $trigger.getAttribute('data-tabs');
 
         if ($activeTab) {
           $activeTab.classList.remove('is-active');

@@ -1,9 +1,6 @@
-[data-tabs-container] {
-}
-
 [data-tabs-trigger] {
   &.is-active {
-    color: $accent-color;
+    background-color: $accent-color;
   }
 }
 

@@ -1,0 +1,111 @@
+.partners {
+  background-color: #141111;
+
+  &__subtitle {
+    margin-bottom: 80px;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 292px auto;
+    gap: 0 24px;
+  }
+
+  &__tabs {
+    &-item {
+      &.is-more {
+        .partners__item:nth-child(6) ~ .partners__item {
+          display: block;
+        }
+      }
+    }
+
+    a {
+      display: block;
+      border: 1px solid $g2-color;
+      border-top: none;
+      padding: 12px 40px;
+      background-color: #141111;
+      transition: $transition;
+    }
+
+    li {
+      font-family: "AlumniSans", sans-serif;
+      font-weight: 500;
+      font-size: 26px;
+      color: $g1-color;
+
+      &:first-child a {
+        border-top: 1px solid $g2-color;
+        border-radius: 10px 10px 0 0;
+      }
+
+      &:last-child a {
+        border-radius: 0 0 10px 10px;
+      }
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 30px;
+    gap: 24px;
+  }
+
+  &__item {
+    border: 1px solid $g2-color;
+    border-radius: 10px;
+    padding: 34px 40px 30px 50px;
+
+    &:nth-child(6) ~ .partners__item {
+      display: none;
+    }
+  }
+
+  &__img {
+    margin-bottom: 27px;
+
+    picture {
+      display: flex;
+    }
+  }
+
+  &__contacts {
+    margin-bottom: 27px;
+
+    &-icon {
+      @include flex-all-center;
+      @include circle(21px, $g2-color);
+
+      margin-right: 8px;
+    }
+
+    li {
+      @include mb(8px);
+
+      line-height: 1.4;
+      color: $g1-color;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+
+    &::after {
+      content: "";
+      display: block;
+      flex-shrink: 0;
+      margin-left: 8px;
+      width: 24px;
+      height: 24px;
+      background: url("../img/arrow-right-circle-icon.svg") center no-repeat;
+    }
+  }
+}

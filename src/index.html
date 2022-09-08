@@ -10,8 +10,10 @@
     <main class="main">
       @include('partials/hero.html')
       @include('partials/video.html', {
-        "preview": 'img/video-preview-1.jpg',
-        "classes": 'video__container--accent video__container--border'
+        "title": "ДИЛЕРСКИЙ УРОВЕНЬ ДИАГНОСТИКИ",
+        "subtitle": "Для всех электронных систем 94 марок ЕВРОПЫ, АЗИИ, США и СНГ",
+        "preview": "img/video-preview-1.jpg",
+        "containerClasses": "video__container--accent video__container--border",
       })
       @include('partials/compare.html')
       @include('partials/examples.html')
@@ -23,6 +25,15 @@
       @include('partials/documentation.html')
       @include('partials/characteristics.html')
       @include('partials/study.html')
+      @include('partials/garanty.html')
+      @include('partials/trust.html')
+      @include('partials/video.html', {
+        "title": "Инновации Autel",
+        "subtitle": "Будущее автомобильной диагностики",
+        "preview": "img/video-preview-2.jpg",
+        "classes": "section-offset"
+      })
+      @include('partials/partners.html')
     </main>
 
     @include('partials/footer.html')
