@@ -1,5 +1,6 @@
 .footer {
   padding-top: 60px;
+  background-color: #000;
 
   &__inner {
     display: grid;
@@ -58,6 +59,10 @@
 
     li {
       @include mr(10px);
+    }
+
+    img {
+      width: 22px;
     }
 
     a {
