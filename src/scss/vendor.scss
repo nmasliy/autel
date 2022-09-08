@@ -1,7 +1,4 @@
 @import "./vendor/reset";
-
-// стили для библиотеки aos
-// @import "../../node_modules/aos/dist/aos";
-
-// стили для свайпера
+@import "https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.2/plyr.css";
 @import "../../node_modules/swiper/swiper-bundle.min";
+@import "../../node_modules/simplebar/dist/simplebar.min";

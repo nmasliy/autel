@@ -248,9 +248,9 @@ const htmlInclude = () => {
       prefix: '@',
       basepath: '@file'
     }))
-    .pipe(typograf({
-      locale: ['ru', 'en-US']
-    }))
+    // .pipe(typograf({
+    //   locale: ['ru', 'en-US']
+    // }))
     .pipe(dest(buildFolder))
     .pipe(browserSync.stream());
 }
@@ -264,7 +264,7 @@ const watchFiles = () => {
 
   watch(paths.srcScss, styles);
   watch(paths.srcFullJs, scripts);
-  watch(`${paths.srcPartialsFolder}/*.html`, htmlInclude);
+  watch(`${paths.srcPartialsFolder}/**/*.html`, htmlInclude);
   watch(`${srcFolder}/*.html`, htmlInclude);
   watch(`${paths.resourcesFolder}/**`, resources);
   watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg}`, images);

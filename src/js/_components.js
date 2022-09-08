@@ -4,3 +4,4 @@ import './components/tabs';
 import './components/accordion';
 import './components/modals';
 import './components/show-more';
+import './components/player';

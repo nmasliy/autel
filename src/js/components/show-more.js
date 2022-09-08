@@ -1,18 +1,23 @@
-const $triggers = document.querySelectorAll('.partners__btn-more');
+const $triggers = document.querySelectorAll('[data-show-more]');
 
 if ($triggers.length > 0) {
-  const moreText = $triggers[0].dataset.more;
-  const lessText = $triggers[0].dataset.less;
-
   $triggers.forEach(($trigger) => {
+    const lessText = $trigger.dataset.less;
+    const moreText = $trigger.dataset.more;
+
     $trigger.addEventListener('click', function () {
-      const $box = $trigger.closest('.partners__tabs-item');
-      if ($box.classList.contains('is-more')) {
-        $box.classList.remove('is-more');
+      const $parent = $trigger.closest('[data-show-more-parent]');
+      if ($parent.classList.contains('is-more')) {
+        $parent.classList.remove('is-more');
         $trigger.textContent = moreText;
       } else {
-        $box.classList.add('is-more');
-        $trigger.textContent = lessText;
+        if (moreText && lessText) {
+          $parent.classList.add('is-more');
+          $trigger.textContent = lessText;
+        } else {
+          $trigger.classList.add('is-hidden');
+          $parent.classList.add('is-more');
+        }
       }
     });
   });

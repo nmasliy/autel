@@ -118,3 +118,7 @@ a {
     padding: 75px 0;
   }
 }
+
+.simplebar-scrollbar::before {
+  background-color: $light-color;
+}
