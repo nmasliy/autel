@@ -128,3 +128,103 @@
     color: $g1-color;
   }
 }
+
+.modal-chars {
+  &__title {
+    margin-bottom: 48px;
+  }
+
+  .modal__inner {
+    padding: 100px 50px;
+    padding-bottom: 0;
+  }
+}
+
+.modal-table {
+  line-height: 1.2;
+
+  &__title {
+    font-family: "AlumniSans", sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+  }
+
+  &__subtitle {
+    font-family: "AlumniSans", sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 1.1;
+    color: $accent-color;
+  }
+
+  tr {
+    border-top: 1px solid rgba($g2-color, 0.3);
+
+    &.modal-table__spoiler {
+      border: none;
+
+      td {
+        vertical-align: middle;
+      }
+    }
+  }
+
+  thead tr:first-child {
+    border: none;
+
+    td {
+      padding-bottom: 22px;
+    }
+  }
+
+  td,
+  th {
+    vertical-align: middle;
+    padding: 8px;
+    height: 56px;
+    text-align: center;
+
+    &:first-child {
+      padding-left: 32px;
+      width: 39%;
+      text-align: left;
+    }
+
+    &.modal-table__item-top {
+      vertical-align: top;
+    }
+  }
+
+  th:first-child {
+    vertical-align: middle;
+  }
+
+  &__spoiler {
+    background-color: rgba(255, 255, 255, 5%);
+    cursor: pointer;
+
+    + tr {
+      border: none;
+    }
+
+    td {
+      vertical-align: middle;
+      padding: 17px 33px;
+    }
+
+    img {
+      margin-left: 10px;
+      transition: $transition;
+    }
+
+    &.is-active {
+      img {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__item-sm {
+    font-size: 14px;
+  }
+}
