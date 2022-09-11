@@ -15,12 +15,13 @@
 
   &:focus,
   &:active {
+    box-shadow: none;
     background-color: #c8070f;
   }
 
   @include hover {
     &:hover {
-      box-shadow: 0 1px 25px rgb(210 35 42 / 80%);
+      box-shadow: 0 1px 25px rgba(210, 35, 42, 80%);
     }
   }
 }
@@ -35,4 +36,19 @@
   color: $light-color;
   background: transparent;
   cursor: pointer;
+}
+
+.btn-outline {
+  border: 2px solid $g1-color;
+  padding: 16px 20px;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  background-color: $black-color;
+
+  &--accent {
+    border-color: $accent-color;
+    border-radius: 2px;
+    color: $accent-color;
+  }
 }

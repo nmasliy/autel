@@ -17,3 +17,12 @@ $g2-color: #535353;
 $g3-color: #424348;
 $g4-color: #343535;
 $g5-color: #8b8b8b;
+
+// vendors
+:root {
+  --plyr-video-background: rgba(0, 0, 0, 60%);
+  --plyr-range-track-height: 7px;
+  --plyr-range-thumb-height: 17px;
+  --plyr-range-thumb-shadow: none;
+  --plyr-font-size-time: 16px;
+}

@@ -20,16 +20,14 @@
         <li><a href="tel:0503795456">050 379 54 56</a></li>
         <li><a href="mailto:info@autel-ukraine.com.ua">info@autel-ukraine.com.ua</a></li>
       </ul>
-      <ul class="footer__socials footer__col">
-        <li><a href="#"><img src="img/youtube-icon.svg" width="21" height="20" alt="youtube"></a></li>
-        <li><a href="#"><img src="img/instagram-icon.svg" width="21" height="20" alt="instagram"></a></li>
-        <li><a href="#"><img src="img/facebook-icon.svg" width="21" height="20" alt="facebook"></a></li>
-      </ul>
+      @include('socials.html', {
+        classes: 'footer__socials footer__col'
+      })
     </div>
     <div class="footer__bottom">
       <p>Autel-Ukraine Copyright © 2022</p>
-      <p>Договор оферты</p>
-      <p>Политика конфиденциальности</p>
+      <a href="#">Договор оферты</a>
+      <a href="#">Политика конфиденциальности</a>
     </div>
   </div>
 </footer>

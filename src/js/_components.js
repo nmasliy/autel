@@ -2,6 +2,5 @@ import './components/menu';
 import './components/scroll';
 import './components/tabs';
 import './components/accordion';
-import './components/modals';
 import './components/show-more';
-import './components/player';
+import './components/player-and-modals';

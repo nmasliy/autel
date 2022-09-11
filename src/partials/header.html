@@ -4,24 +4,9 @@
       <a class="header__logo header__col" href="./">
         <img width="203" height="40" src="img/logo.svg" alt="autel">
       </a>
-      <nav class="nav" title="site navigation">
-        <ul class="nav__list">
-          <li class="nav__item"><a href="#" data-menu-item>О компании</a></li>
-          <li class="nav__item"><a href="#" data-menu-item>Где купить</a></li>
-          <li class="nav__item"><a href="#" data-menu-item>Блог</a></li>
-          <li class="nav__item"><a href="#" data-menu-item>Курсы</a></li>
-          <li class="nav__item nav__item--submenu">
-            <a href="#"><span>Продукты</span></a>
-            <ul>
-              <li><a href="#" data-menu-item>GrunBaum</a></li>
-              <li><a href="#" data-menu-item>Jaltest</a></li>
-              <li><a href="#" data-menu-item>BrainStorm</a></li>
-            </ul>
-          </li>
-          <li class="nav__item"><a href="#" data-menu-item>Контакты</a></li>
-        </ul>
-      </nav>
+      @include('nav.html')
       <a class="header__btn" href="#">Магазин</a>
+      <a class="header__phone-mob" href="tel:0503795456">050 379 54 56</a>
       <button class="burger" data-burger aria-label="Открыть меню">
         <span class="burger__line"></span>
       </button>
@@ -44,6 +29,14 @@
     </div>
   </div>
   <div class="menu" data-menu>
+    <div class="menu__buttons">
+      <a class="menu__btn btn-outline btn-outline--accent" href="#">Магазин</a>
+      <a class="menu__btn btn-outline" href="#">Пройдите тест-драйв</a>
+    </div>
+    @include('nav.html')
+    <a class="menu__phone" href="tel:0503795456">050 379 54 56</a>
+    <a class="menu__email" href="mailto:info@autel-ukraine.com.ua">info@autel-ukraine.com.ua</a>
+    @include('socials.html', {classes: ''})
   </div>
   <div class="overlay" data-menu-overlay></div>
 </header>

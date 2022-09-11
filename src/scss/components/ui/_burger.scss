@@ -1,7 +1,7 @@
 .burger {
-  $burger-width: 30px;
-  $burger-height: 30px;
-  $burger-line-height: 2px;
+  $burger-width: 22px;
+  $burger-height: 22px;
+  $burger-line-height: 3px;
 
   position: relative;
   display: none;
@@ -46,7 +46,7 @@
   }
 
   &.is-active {
-    z-index: 7;
+    z-index: 9;
 
     &::before {
       top: 50%;

@@ -1,14 +1,15 @@
-<div class="modal" id="modal-video" aria-hidden="true">
+<div class="modal modal-video" id="modal-video" aria-hidden="true">
   <div class="modal__wrapper">
-    <div class="modal__inner">
-      <div class="modal__content">
-        <!-- data-poster="img/test-preview-1.jpg" -->
-        <video id="player" playsinline controls >
-          <source src="video/video-1.mp4" type="video/mp4" />
-          <!-- <source src="video/video-1.webm" type="video/webm" /> -->
-        </video>
-        <button class="modal__close" data-modal-close><img src="img/close-icon.svg" width="21" height="21"
-            alt="Закрыть окно"></button>
+    <div class="modal__scroll-wrapper" data-simplebar>
+      <div class="modal__inner">
+        <div class="modal__content">
+          <video id="player" data-poster="img/poster.jpg" playsinline controls>
+            <source src="video/video-1.mp4" type="video/mp4" />
+            <!-- <source src="video/video-1.webm" type="video/webm" /> -->
+          </video>
+          <button class="modal__close" data-modal-close><img src="img/close-icon.svg" width="21" height="21"
+              alt="Закрыть окно"></button>
+        </div>
       </div>
     </div>
   </div>

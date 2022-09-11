@@ -1,8 +1,9 @@
 <section class="video @classes">
   <div class="video__container container container--lg @containerClasses" style="background-image: url('@preview');">
     <div class="video__inner">
-      <button class="btn-reset player-icon video__play" data-modal-open="modal-video">
-        <img src="img/play-circle-icon.svg" alt="Play">
+      <button class="btn-reset player-icon video__play" data-video-src="video/video-1.mp4"
+        data-video-poster="img/poster.jpg" data-video-trigger data-modal-open="modal-video">
+        @include('../img/play-circle-icon.svg')
       </button>
       <h2 class="video__title section-title centered">@title</h2>
       <p class="video__subtitle section-subtitle centered">@subtitle</p>

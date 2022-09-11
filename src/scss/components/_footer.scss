@@ -48,27 +48,20 @@
 
     li {
       @include mb(16px);
+
+      a {
+        transition: $transition;
+
+        @include hover {
+          color: $accent-color;
+        }
+      }
     }
   }
 
   &__socials {
-    @include flex-v-center;
-
     justify-self: flex-end;
     grid-column: span 5;
-
-    li {
-      @include mr(10px);
-    }
-
-    img {
-      width: 22px;
-    }
-
-    a {
-      @include flex-all-center;
-      @include circle(32px, $g3-color);
-    }
   }
 
   &__bottom {
@@ -80,5 +73,13 @@
     line-height: 1.4;
     color: $g2-color;
     gap: 0 33px;
+
+    a {
+      transition: $transition;
+
+      @include hover {
+        color: $g1-color;
+      }
+    }
   }
 }

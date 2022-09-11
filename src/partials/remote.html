@@ -14,9 +14,10 @@
           </div>
           <div class="remote__video-items">
             <div class="remote__play player-icon-sm">
-              <img src="img/play-circle-icon.svg" width="25" height="25" alt="Play">
+              @include('../img/play-circle-icon.svg')
             </div>
-            <button class="btn-link">как это работает</button>
+            <button class="btn-link" data-video-src="video/video-1.mp4"
+        data-video-poster="img/poster.jpg" data-video-trigger data-modal-open="modal-video">как это работает</button>
           </div>
         </div>
         <ul class="remote__list">
