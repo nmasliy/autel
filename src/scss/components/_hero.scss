@@ -11,6 +11,10 @@
     color: $light-color;
   }
 
+  &__img-mob {
+    display: none;
+  }
+
   &__img {
     @include flex-h-center;
 
@@ -82,7 +86,7 @@
       top: 20px;
       z-index: -1;
       margin: 0 auto;
-      width: 70%;
+      width: 760px;
       height: 1px;
       background-color: $g3-color;
     }
