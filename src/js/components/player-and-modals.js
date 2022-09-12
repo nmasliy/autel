@@ -18,10 +18,8 @@ const player = new Plyr('#player', {
   ],
   invertTime: false,
   loadSprite: false,
-  iconUrl: '../img/plyr.svg',
-  blankVideo: '../video/video-1.mp4',
-  // previewThumbnails: false,
-  // seekTime
+  iconUrl: 'img/plyr.svg',
+  blankVideo: 'video/video-1.mp4',
 });
 
 const $videoTriggers = document.querySelectorAll('[data-video-trigger]');
