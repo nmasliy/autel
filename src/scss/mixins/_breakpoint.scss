@@ -41,3 +41,9 @@
     @content;
   }
 }
+
+@mixin xs-mobile {
+  @media (max-width: (376px)) {
+    @content;
+  }
+}
