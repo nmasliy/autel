@@ -42,14 +42,36 @@ $videoTriggers.forEach(($item) => {
   });
 });
 
+const $modalCharsTriggers = document.querySelectorAll('.chars__btn[data-chars]');
+
+const $modalChars = document.querySelector('#modal-chars');
+
 const options = {
   disableScroll: true,
   transition: 300,
-  onClose: () => {
-    player.stop();
+  onClose: (modal) => {
+    if (modal.id === 'modal-video') {
+      player.stop();
+    } else if (modal.id === 'modal-chars') {
+      $modalChars.classList.remove('is-active-1')
+      $modalChars.classList.remove('is-active-2')
+      $modalChars.classList.remove('is-active-3')
+    }
   },
   nested: false,
   overlayCloseAll: true,
 };
 const modals = new SimpleModal(options);
 modals.init();
+
+$modalCharsTriggers.forEach($item => {
+  $item.addEventListener('click', function() {
+    const activeItem = $item.dataset.chars;
+    const name = $item.dataset.name;
+    const $tableTitle = document.querySelector('.modal-table__title-mob');
+
+    $tableTitle.innerHTML = 'Характеристики <br/>' + name;
+
+    $modalChars.classList.add('is-active-' + activeItem)
+  })
+})

@@ -61,7 +61,11 @@
     opacity: 1;
   }
 }
-
+#modal-complect-1 {
+  .modal-complect__btn {
+    display: none;
+  }
+}
 .modal-complect {
   &__inner {
     &.is-more {
@@ -83,7 +87,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    grid-template-columns: repeat(4, 1fr);
   }
 
   &__item {
@@ -147,6 +150,9 @@
     font-family: "AlumniSans", sans-serif;
     font-weight: 500;
     font-size: 40px;
+    &-mob {
+      display: none;
+    }
   }
 
   &__subtitle {
@@ -214,6 +220,8 @@
 
     img {
       margin-left: 10px;
+      position: relative;
+      top: 3px;
       transition: $transition;
     }
 
@@ -233,5 +241,8 @@
   .modal__inner {
     padding: 130px 100px;
     max-width: 1470px;
+  }
+  .modal__wrapper {
+    align-items: center;
   }
 }
