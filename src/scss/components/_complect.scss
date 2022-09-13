@@ -1,5 +1,7 @@
 .complect {
   background: url("../img/complect-bg.png") no-repeat center / cover;
+  background-image: image-set(
+    url("../img/complect-bg@1x.webp") 1x);
 
   &__subtitle {
     margin: 0 auto 50px;

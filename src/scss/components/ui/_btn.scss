@@ -36,6 +36,13 @@
   color: $light-color;
   background: transparent;
   cursor: pointer;
+  transition: $transition;
+
+  @include hover {
+    &:hover {
+      color: $accent-color;
+    }
+  }
 }
 
 .btn-outline {

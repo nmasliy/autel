@@ -1,5 +1,5 @@
 .modal {
-  $transition: opacity 0.3s ease-out;
+  $transitionModal: opacity 0.3s ease-out;
 
   position: fixed;
   left: 0;
@@ -12,7 +12,7 @@
   box-sizing: border-box;
   background-color: rgba(#141111, 0.99);
   opacity: 0;
-  transition: $transition;
+  transition: $transitionModal;
 
   &__scroll-wrapper {
     width: 100%;
@@ -47,6 +47,18 @@
     font-size: 40px;
     background: 0;
     cursor: pointer;
+    svg {
+      width: 23px;
+      height: 23px;
+    }
+    path {
+      transition: $transition;
+    }
+    @include hover {
+      path {
+        stroke: $accent-color;
+      }
+    }
   }
 
   &[aria-hidden="true"] {
@@ -139,7 +151,6 @@
 
   .modal__inner {
     padding: 100px 50px;
-    padding-bottom: 0;
   }
 }
 

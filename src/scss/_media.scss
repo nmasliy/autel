@@ -1418,7 +1418,7 @@
     &__tabs-item {
       &.is-more {
         .partners__item:nth-child(3) ~ .partners__item {
-          display: block;
+          display: flex;
         }
       }
     }
