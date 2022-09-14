@@ -15,7 +15,7 @@
     &-item {
       &.is-more {
         .partners__item:nth-child(6) ~ .partners__item {
-          display: block;
+          display: flex;
         }
       }
     }
@@ -58,21 +58,25 @@
   }
 
   &__item {
+    display: flex;
+    flex-direction: column;
     border: 1px solid $g2-color;
     border-radius: 10px;
-    padding: 34px 40px 30px 50px;
+    padding: 34px 10px 30px 50px;
 
     &:nth-child(6) ~ .partners__item {
       display: none;
     }
   }
 
-  &__img {
-    margin-bottom: 27px;
-
-    picture {
-      display: flex;
-    }
+  &__name {
+    font-family: 'AlumniSans', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: $g1-color;
+    margin-bottom: 33px;
   }
 
   &__contacts {
@@ -82,6 +86,7 @@
       @include flex-all-center;
       @include circle(21px, $g2-color);
 
+      flex-shrink: 0;
       margin-right: 8px;
     }
 
@@ -101,6 +106,7 @@
   &__btn {
     display: flex;
     align-items: center;
+    margin-top: auto;
 
     &::after {
       content: "";
