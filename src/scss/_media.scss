@@ -700,11 +700,14 @@
       }
       &::before {
         font-size: 22px;
-        top: 0;
+        top: -3px;
       }
       &:last-child {
         margin-bottom: 0;
       }
+    }
+    &__info {
+      margin-left: 18px;
     }
     &__name {
       font-size: 22px;
@@ -1024,6 +1027,10 @@
         }
       }
     }
+  }
+
+  .chars::after {
+    display: none;
   }
 
   .footer {

@@ -66,6 +66,8 @@
   }
 
   &__item {
+    display: flex;
+    align-items: flex-start;
     @include mb(14px);
 
     counter-increment: remote;
@@ -81,6 +83,7 @@
     &::before {
       content: "0" counter(remote) "/ ";
       color: $accent-color;
+      margin-right: 3px;
     }
   }
 }
