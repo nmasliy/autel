@@ -38,6 +38,18 @@
 
   &__bottom {
     background-color: rgba($g4-color, 0.3);
+    .nav {
+      flex-grow: 0;
+      &__list {
+        justify-content: flex-start;
+      }
+      &__item {
+        margin-right: 40px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
   }
 
   &__bottom-container {
@@ -50,12 +62,13 @@
 
   &__phone {
     position: relative;
-    margin-left: 80px;
+    margin-left: 70px;
     padding: 5px 0 5px 32px;
     font-weight: 500;
     line-height: 1.25;
     letter-spacing: 0.01em;
     transition: $transition;
+    margin-right: auto;
 
     &::before {
       @include circle(26px);
@@ -74,32 +87,6 @@
     }
   }
 
-  &__link {
-    position: relative;
-    margin-right: 13px;
-    margin-left: 30px;
-    transition: $transition;
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 0;
-      height: 1px;
-      background-color: $accent-color;
-      transition: $transition;
-    }
-
-    @include hover {
-      color: $accent-color;
-
-      &::before {
-        width: 100%;
-      }
-    }
-  }
-
   &.is-active {
     .header {
       &__top {
@@ -115,7 +102,6 @@
 
 .nav {
   flex-grow: 1;
-  margin-right: auto;
 
   &__list {
     @include flex-sb;

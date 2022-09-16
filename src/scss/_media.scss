@@ -1458,6 +1458,9 @@
 }
 
 @include xs-mobile {
+  .header__logo {
+    margin-right: 3px;
+  }
   .cards {
     &__item--big {
       width: 100%;
