@@ -45,6 +45,7 @@
       }
       &__item {
         margin-right: 40px;
+        flex-shrink: 0;
         &:last-child {
           margin-right: 0;
         }

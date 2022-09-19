@@ -1131,7 +1131,8 @@
 
       &-mob {
         display: block;
-        margin-bottom: -10px;
+        text-align: center;
+        margin: -60px 0 -45px;
       }
     }
   }
@@ -1365,6 +1366,9 @@
   .hero {
     &__item {
       font-size: 12px;
+    }
+    &__img-mob {
+      margin-bottom: -45px;
     }
   }
   .cards {

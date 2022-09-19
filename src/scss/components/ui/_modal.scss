@@ -251,9 +251,8 @@
 
 .modal-video {
   .modal__inner {
-    padding: 90px 60px 60px;
+    padding: 130px 100px;
     max-width: 1470px;
-    width: 100%;
     overflow: auto;
     display: flex;
     flex-direction: column;
@@ -262,33 +261,5 @@
   }
   .modal__content {
     margin: auto;
-  }
-  .modal__close {
-    top: 30px;
-    right: 30px;
-  }
-}
-
-.modal-youtube {
-  .modal__inner {
-    padding: 60px;
-    max-width: 1470px;
-    width: 100%;
-  }
-  .modal__wrapper {
-    align-items: center;
-  }
-  .modal__close {
-    top: -70px;
-    right: 0;
-  }
-  .modal__content {
-    position: relative;
-    margin-top: 40px;
-  }
-  .plyr__video-embed {
-    height: calc(100% - 260px);
-    max-height: calc(100vh - 240px);
-    min-height: 300px;
   }
 }
