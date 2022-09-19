@@ -2,7 +2,6 @@ import Plyr from 'plyr';
 
 import SimpleModal from '../functions/modals';
 
-
 const player = new Plyr('#player', {
   controls: [
     'play-large',
@@ -23,10 +22,27 @@ const player = new Plyr('#player', {
 });
 
 const $videoTriggers = document.querySelectorAll('[data-video-trigger]');
+const $youtubeTriggers = document.querySelectorAll('[data-youtube-trigger]');
+
+$youtubeTriggers.forEach(($item) => {
+  const src = $item.dataset.videoSrc || 'uHAYolNpjWg';
+
+  $item.addEventListener('click', function () {
+    player.source = {
+      type: 'video',
+      sources: [
+        {
+          src: src,
+          provider: 'youtube',
+        },
+      ],
+    };
+  });
+});
 
 $videoTriggers.forEach(($item) => {
   const poster = $item.dataset.videoPoster || '';
-  const src = $item.dataset.videoSrc || 'video/video-1.mp4';
+  const src = $item.dataset.videoSrc || 'uHAYolNpjWg';
 
   $item.addEventListener('click', function () {
     player.source = {
