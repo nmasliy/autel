@@ -251,8 +251,9 @@
 
 .modal-video {
   .modal__inner {
-    padding: 130px 100px;
+    padding: 90px 60px 60px;
     max-width: 1470px;
+    width: 100%;
     overflow: auto;
     display: flex;
     flex-direction: column;
@@ -262,8 +263,9 @@
   .modal__content {
     margin: auto;
   }
-  .modal__scroll-wrapper {
-    margin: auto;
+  .modal__close {
+    top: 30px;
+    right: 30px;
   }
 }
 
@@ -287,8 +289,6 @@
   .plyr__video-embed {
     height: calc(100% - 260px);
     max-height: calc(100vh - 240px);
-  }
-  .modal__scroll-wrapper {
-    margin: auto;
+    min-height: 300px;
   }
 }
