@@ -1,6 +1,7 @@
 .video {
-  padding-left: 15px;
   padding-right: 15px;
+  padding-left: 15px;
+
   &__container {
     @include bg-cover;
     @include flex-all-center;

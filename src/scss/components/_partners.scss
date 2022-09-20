@@ -29,7 +29,7 @@
       transition: $transition;
 
       @include hover {
-        background-color:  rgba(210, 35, 42, 0.1);
+        background-color: rgba(210, 35, 42, 10%);
       }
     }
 
@@ -70,13 +70,13 @@
   }
 
   &__name {
-    font-family: 'AlumniSans', sans-serif;
+    margin-bottom: 33px;
+    font-family: "AlumniSans", sans-serif;
     font-weight: 700;
     font-size: 36px;
     line-height: 1;
     text-transform: uppercase;
     color: $g1-color;
-    margin-bottom: 33px;
   }
 
   &__contacts {

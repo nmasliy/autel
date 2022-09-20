@@ -35,8 +35,8 @@
   text-transform: uppercase;
   color: $light-color;
   background: transparent;
-  cursor: pointer;
   transition: $transition;
+  cursor: pointer;
 
   @include hover {
     &:hover {

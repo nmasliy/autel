@@ -32,9 +32,9 @@
     margin: auto;
     border-radius: 12px;
     padding: 100px 160px 132px;
+    height: 100%;
     max-width: 1270px;
     max-height: 100%;
-    height: 100%;
     background-color: $black-color;
   }
 
@@ -48,13 +48,16 @@
     font-size: 40px;
     background: 0;
     cursor: pointer;
+
     svg {
       width: 23px;
       height: 23px;
     }
+
     path {
       transition: $transition;
     }
+
     @include hover {
       path {
         stroke: $accent-color;
@@ -74,11 +77,13 @@
     opacity: 1;
   }
 }
+
 #modal-complect-1 {
   .modal-complect__btn {
     display: none;
   }
 }
+
 .modal-complect {
   &__inner {
     &.is-more {
@@ -162,6 +167,7 @@
     font-family: "AlumniSans", sans-serif;
     font-weight: 500;
     font-size: 40px;
+
     &-mob {
       display: none;
     }
@@ -231,9 +237,9 @@
     }
 
     img {
-      margin-left: 10px;
       position: relative;
       top: 3px;
+      margin-left: 10px;
       transition: $transition;
     }
 
@@ -251,14 +257,15 @@
 
 .modal-video {
   .modal__inner {
-    padding: 130px 100px;
-    max-width: 1470px;
-    overflow: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: auto;
+    padding: 130px 100px;
+    max-width: 1470px;
   }
+
   .modal__content {
     margin: auto;
   }

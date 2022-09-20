@@ -1,7 +1,9 @@
 .complect {
   background: url("../img/complect-bg.png") no-repeat center / cover;
-  background-image: image-set(
-    url("../img/complect-bg@1x.webp") 1x);
+  background-image:
+    image-set(
+      url("../img/complect-bg@1x.webp") 1x
+    );
 
   &__subtitle {
     margin: 0 auto 50px;
@@ -10,18 +12,19 @@
 
   &__list {
     counter-reset: complect;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     margin-bottom: 50px;
   }
 
   &__item {
     counter-increment: complect;
     position: relative;
+    flex-grow: 1;
     padding: 35px 24px;
+    width: calc(100% / 3);
     box-shadow: 0 0 0 1px $g2-color;
     color: $g1-color;
-    background-color: $black-color;
 
     &::before {
       @include circle(22px);
@@ -42,6 +45,7 @@
 
     &:first-child {
       border-radius: 10px 0 0;
+      width: 48%;
     }
 
     &:last-child {
@@ -54,6 +58,10 @@
 
     &:nth-child(3) {
       border-radius: 0 10px 0 0;
+    }
+
+    &:nth-child(2) {
+      padding-right: 72px;
     }
   }
 
