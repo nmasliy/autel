@@ -324,6 +324,8 @@ const toProd = (done) => {
   done();
 };
 
+exports.scripts = scripts;
+
 exports.default = series(clean, htmlInclude, scripts, styles, resources, images, webpImages, avifImages,  watchFiles);
 
 exports.backend = series(clean, htmlInclude, scriptsBackend, stylesBackend, resources, images, webpImages, avifImages)
