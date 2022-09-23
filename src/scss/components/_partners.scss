@@ -107,6 +107,7 @@
     display: flex;
     align-items: center;
     margin-top: auto;
+    transition: $transition;
 
     &::after {
       content: "";
