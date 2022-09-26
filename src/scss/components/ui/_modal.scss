@@ -78,12 +78,6 @@
   }
 }
 
-#modal-complect-1 {
-  .modal-complect__btn {
-    display: none;
-  }
-}
-
 .modal-complect {
   &__inner {
     &.is-more {
@@ -143,7 +137,7 @@
 
   &__name {
     margin: auto 0;
-    padding: 0 33px;
+    padding: 0 28px;
     font-size: 14px;
     line-height: 1.4;
     color: $g1-color;
