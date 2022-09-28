@@ -38,6 +38,8 @@
   }
 
   &__name {
+    display: flex;
+    flex-wrap: wrap;
     align-self: center;
     padding: 40px;
     font-family: "AlumniSans", sans-serif;
@@ -48,13 +50,8 @@
 
     &::before {
       content: "0" counter(trust) "/ ";
+      margin-right: 4px;
       color: $accent-color;
-    }
-
-    span {
-      display: block;
-      margin-left: 35px;
-      text-align: center;
     }
   }
 }
