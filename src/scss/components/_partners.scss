@@ -95,6 +95,11 @@
 
       line-height: 1.4;
       color: $g1-color;
+
+      > div {
+        display: flex;
+        align-items: center;
+      }
     }
 
     a {
