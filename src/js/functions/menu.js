@@ -14,7 +14,12 @@
 
   const checkScreenWidth = () => {
     // Активируем меню только на экранах <= 1024
-    if ($menu && window.innerWidth <= MOBILE_MENU_BREAKPOINT && !isInit) {
+    if (
+      $menu &&
+      $burger &&
+      window.innerWidth <= MOBILE_MENU_BREAKPOINT &&
+      !isInit
+    ) {
       isInit = true;
       $burger.addEventListener('click', toggleMenu);
       $close?.addEventListener('click', closeMenu);
@@ -27,7 +32,6 @@
           el.addEventListener('click', toggleSubmenu);
         });
       }
-
     } else {
       window.addEventListener('resize', checkScreenWidth);
     }
